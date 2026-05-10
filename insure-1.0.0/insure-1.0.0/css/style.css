@@ -469,3 +469,410 @@
 .footer .copyright a:hover {
     color: #FFFFFF;
 }
+
+
+/*** Service Start ***/
+.service .service-item {
+    border-radius: 10px;
+}
+.service .service-item .service-img {
+    position: relative;
+    overflow: hidden;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.service .service-item .service-img img {
+    transition: 0.5s;
+}
+
+.service .service-item:hover .service-img img {
+    transform: scale(1.1);
+}
+
+.service .service-item .service-img::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background: rgba(1, 95, 201, .2);
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.service .service-item:hover .service-img::after {
+    height: 100%;
+}
+
+.service .service-item .service-img .service-icon {
+    position: absolute;
+    width: 70px;
+    bottom: 0;
+    right: 25px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background: var(--bs-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+    z-index: 9;
+}
+
+.service .service-item .service-img .service-icon i {
+    color: var(--bs-primary);
+    transition: 0.5s;
+}
+
+.service .service-item:hover .service-img .service-icon i {
+    transform: rotateX(360deg);
+    color: var(--bs-white);
+}
+
+.service .service-item:hover .service-img .service-icon {
+    bottom: 0;
+    color: var(--bs-white);
+    background: var(--bs-primary);
+}
+
+.service .service-content {
+    position: relative;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: var(--bs-light);
+}
+
+.service .service-item .service-content .service-content-inner {
+    position: relative;
+    z-index: 9;
+}
+
+.service .service-item .service-content .service-content-inner .h4,
+.service .service-item .service-content .service-content-inner p {
+    transition: 0.5s;
+}
+
+.service .service-item:hover .service-content .service-content-inner .h4,
+.service .service-item:hover .service-content .service-content-inner p {
+    color: var(--bs-white);
+}
+
+.service .service-item:hover .service-content .service-content-inner .btn.btn-primary {
+    color: var(--bs-primary);
+    background: var(--bs-white);
+}
+
+.service .service-item:hover .service-content .service-content-inner .btn.btn-primary:hover {
+    color: var(--bs-white);
+    background: var(--bs-dark);
+}
+
+.service .service-item:hover .service-content .service-content-inner .h4:hover {
+    color: var(--bs-dark);
+}
+
+.service .service-item .service-content::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: var(--bs-primary);
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.service .service-item:hover .service-content::after {
+    height: 100%;
+}
+/*** Service End ***/
+
+
+/* SERVICE CARD ANIMATION */
+/*
+.service-item{
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s;
+    border-radius: 20px;
+    background: #fff;
+}
+
+.service-item:hover{
+    transform: translateY(-10px);
+    box-shadow: 0px 15px 40px rgba(0,0,0,0.15);
+}
+
+/* CONTENT BACKGROUND ANIMATION */
+/*
+.service-content{
+    position: relative;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.service-item:hover .service-content{
+    background: linear-gradient(45deg,#00c6ff,#0072ff);
+    color: #fff;
+}
+
+/* TEXT COLOR CHANGE */
+/*
+.service-item:hover h4,
+.service-item:hover p{
+    color: #fff !important;
+}
+
+/* BUTTON ANIMATION */
+/*
+.service-item .btn{
+    transition: 0.4s;
+}
+
+.service-item:hover .btn{
+    background: #fff;
+    color: #0072ff;
+}
+
+/* IMAGE ZOOM EFFECT */
+/*
+.service-img{
+    overflow: hidden;
+}
+
+.service-img img{
+    transition: 0.6s;
+}
+
+.service-item:hover .service-img img{
+    transform: scale(1.08);
+}
+
+/* ICON ANIMATION */
+/*
+.service-icon{
+    transition: 0.5s;
+}
+
+.service-item:hover .service-icon{
+    transform: rotate(5deg) scale(1.1);
+}
+
+/* READ MORE BUTTON */
+/*
+.btn-primary{
+    border: none;
+    background: #00bfff;
+}
+
+.btn-primary:hover{
+    background: #fff;
+    color: #00bfff;
+} 
+
+/* =========================
+   SERVICES SECTION STYLE
+========================= */
+
+.service .service-item {
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.5s;
+    box-shadow: 0px 5px 20px rgba(0,0,0,0.08);
+}
+
+/* CARD HOVER */
+
+.service .service-item:hover{
+    transform: translateY(-10px);
+    box-shadow: 0px 15px 40px rgba(0,0,0,0.15);
+}
+
+
+/* =========================
+   IMAGE SECTION
+========================= */
+
+.service .service-item .service-img {
+    position: relative;
+    overflow: hidden;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.service .service-item .service-img img {
+    width: 100%;
+    transition: 0.6s;
+}
+
+/* IMAGE ZOOM */
+
+.service .service-item:hover .service-img img {
+    transform: scale(1.1);
+}
+
+
+/* IMAGE OVERLAY */
+
+.service .service-item .service-img::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background: rgba(1, 95, 201, 0.25);
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.service .service-item:hover .service-img::after {
+    height: 100%;
+}
+
+
+/* =========================
+   SERVICE ICON
+========================= */
+
+.service .service-item .service-img .service-icon {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    bottom: 0;
+    right: 25px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background: var(--bs-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+    z-index: 9;
+}
+
+.service .service-item .service-img .service-icon i {
+    color: var(--bs-primary);
+    transition: 0.6s;
+    font-size: 35px;
+}
+
+/* ICON ROTATE */
+
+.service .service-item:hover .service-img .service-icon i {
+    transform: rotateX(360deg);
+    color: var(--bs-white);
+}
+
+/* ICON BACKGROUND */
+
+.service .service-item:hover .service-img .service-icon {
+    background: var(--bs-primary);
+}
+
+
+/* CUSTOM PNG ICONS */
+
+.service .service-item .service-img .service-icon img{
+    width:45px;
+    transition:0.6s;
+}
+
+.service .service-item:hover .service-img .service-icon img{
+    transform: rotateY(360deg) scale(1.1);
+}
+
+
+/* =========================
+   CONTENT SECTION
+========================= */
+
+.service .service-content {
+    position: relative;
+    padding: 35px 25px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background: var(--bs-light);
+    overflow: hidden;
+}
+
+/* TEXT CONTENT */
+
+.service .service-item .service-content .service-content-inner {
+    position: relative;
+    z-index: 9;
+}
+
+.service .service-item .service-content .service-content-inner .h4,
+.service .service-item .service-content .service-content-inner p {
+    transition: 0.5s;
+}
+
+/* TEXT COLOR HOVER */
+
+.service .service-item:hover .service-content .service-content-inner .h4,
+.service .service-item:hover .service-content .service-content-inner p {
+    color: var(--bs-white);
+}
+
+/* TITLE HOVER */
+
+.service .service-item:hover .service-content .service-content-inner .h4:hover {
+    color: var(--bs-dark);
+}
+
+
+/* =========================
+   BUTTON STYLE
+========================= */
+
+.service .service-content .btn.btn-primary{
+    border:none;
+    transition:0.5s;
+}
+
+/* BUTTON HOVER */
+
+.service .service-item:hover .service-content .service-content-inner .btn.btn-primary {
+    color: var(--bs-primary);
+    background: var(--bs-white);
+}
+
+/* BUTTON SECOND HOVER */
+
+.service .service-item:hover .service-content .service-content-inner .btn.btn-primary:hover {
+    color: var(--bs-white);
+    background: var(--bs-dark);
+}
+
+
+/* =========================
+   BACKGROUND FILL ANIMATION
+========================= */
+
+.service .service-item .service-content::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background: linear-gradient(45deg,#00c6ff,#0072ff);
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.service .service-item:hover .service-content::after {
+    height: 100%;
+}
