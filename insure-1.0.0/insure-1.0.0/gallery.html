@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Insure - Insurance HTML Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Poppins:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icon Font Stylesheet -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+
+    <style>
+        .gallery-card {
+            border-radius: 20px;
+            overflow: hidden;
+        
+            margin-bottom: 30px; /* increase this */
+        }
+                :root {
+                    --primary: #6c63ff;
+                }
+                
+                body {
+                    font-family: 'Inter', sans-serif;
+                    background: #f8f9fa;
+                }
+                
+                .navbar { background: rgba(255,255,255,0.95); backdrop-filter: blur(12px); box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+                
+                .section-title {
+                    font-family: 'Playfair Display', serif;
+                    font-size: 3.2rem;
+                    font-weight: 700;
+                }
+                
+                .gallery-card {
+                    border-radius: 20px;
+                    overflow: hidden;
+                    background: white;
+                    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+                    transition: all 0.4s ease;
+                    height: 100%;
+                }
+                
+                .gallery-card:hover {
+                    transform: translateY(-15px);
+                    box-shadow: 0 25px 50px rgba(108, 99, 255, 0.2);
+                }
+                
+                .gallery-card img {
+                    height: 260px;
+                    object-fit: cover;
+                    width: 100%;
+                }
+                
+                .card-body {
+                    padding: 24px;
+                }
+                
+                .category-badge {
+                    position: absolute;
+                    top: 15px;
+                    right: 15px;
+                    padding: 6px 16px;
+                    border-radius: 50px;
+                    font-size: 0.85rem;
+                    font-weight: 600;
+                }
+                
+                .filter-btn {
+                    padding: 12px 28px;
+                    border-radius: 50px;
+                    margin: 8px;
+                    font-weight: 500;
+                }
+                
+                .filter-btn.active {
+                    background: var(--primary);
+                    color: white;
+                    border: none;
+                }
+            </style>
+
+            <style>
+              /* =========================
+   GALLERY SECTION
+========================= */
+
+.gallery-section{
+    background:#f8f9fa;
+}
+
+.gallery-btn{
+    border:none;
+    padding:10px 25px;
+    margin:5px;
+    border-radius:30px;
+    background:#fff;
+    color:#0d6efd;
+    font-weight:600;
+    transition:0.4s;
+    border:1px solid #0d6efd;
+}
+
+.gallery-btn:hover,
+.gallery-btn.active{
+    background:#0d6efd;
+    color:#fff;
+}
+
+.gallery-card{
+    background:#fff;
+    border-radius:20px;
+    overflow:hidden;
+    transition:0.5s;
+    box-shadow:0px 5px 20px rgba(0,0,0,0.08);
+    height:100%;
+}
+
+.gallery-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0px 15px 40px rgba(0,0,0,0.15);
+}
+
+.gallery-card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    transition:0.5s;
+}
+
+.gallery-card:hover img{
+    transform:scale(1.08);
+}
+
+.gallery-content{
+    padding:25px;
+}
+
+.gallery-tag{
+    display:inline-block;
+    background:#0d6efd;
+    color:#fff;
+    padding:5px 15px;
+    border-radius:20px;
+    font-size:14px;
+    margin-bottom:15px;
+}
+
+.gallery-content h4{
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+.gallery-content p{
+    color:#6c757d;
+    margin-bottom:20px;
+}
+            </style>
+
+<style>
+  /* BUTTON JUMP ANIMATION */
+
+.quote-btn{
+animation: jump 2s infinite;
+}
+
+@keyframes jump{
+
+0%{
+    transform: translateY(0);
+}
+
+50%{
+    transform: translateY(-8px);
+}
+
+100%{
+    transform: translateY(0);
+}
+
+}
+</style>
+  </head>
+
+  <body>
+    <!-- Spinner Start -->
+    <div
+      id="spinner"
+      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+    >
+      <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Topbar Start -->
+    <div
+      class="container-fluid bg-dark text-white-50 py-2 px-0 d-none d-lg-block"
+    >
+      <div class="row gx-0 align-items-center">
+        <div class="col-lg-7 px-5 text-start">
+          <div class="h-100 d-inline-flex align-items-center me-4">
+            <small class="fa fa-phone-alt me-2"></small>
+            <small>+91 7981862386</small>
+          </div>
+          <div class="h-100 d-inline-flex align-items-center me-4">
+            <small class="far fa-envelope-open me-2"></small>
+            <small>info@example.com</small>
+          </div>
+          <div class="h-100 d-inline-flex align-items-center me-4">
+            <small class="far fa-clock me-2"></small>
+            <small>Mon - Fri : 09 AM - 09 PM</small>
+          </div>
+        </div>
+        <div class="col-lg-5 px-5 text-end">
+          <div class="h-100 d-inline-flex align-items-center">
+            <a class="text-white-50 ms-4" href=""
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a class="text-white-50 ms-4" href=""
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a class="text-white-50 ms-4" href=""
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a class="text-white-50 ms-4" href=""
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Topbar End -->
+
+    <!-- Navbar Start -->
+    <nav
+      class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5"
+    >
+      <a href="index.html" class="navbar-brand d-flex align-items-center">
+        <h1 class="m-0">
+          <img
+            class="img-fluid me-3"
+            src="img/icon/logo_a2z.png"
+            alt=""
+            width="70"
+          />A2Z
+        </h1>
+      </a>
+      <button
+        type="button"
+        class="navbar-toggler"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarCollapse"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav mx-auto bg-light rounded pe-4 py-3 py-lg-0">
+          <a href="index.html" class="nav-item nav-link">Home</a>
+          <a href="about.html" class="nav-item nav-link">About Us</a>
+          <a href="service.html" class="nav-item nav-link">Our Services</a>
+          <a href="gallery.html" class="nav-item nav-link">Gallery</a>
+          <div class="nav-item dropdown">
+            <a
+              href="#"
+              class="nav-link dropdown-toggle active"
+              data-bs-toggle="dropdown"
+              >Pages</a
+            >
+            <div class="dropdown-menu bg-light border-0 m-0">
+              <a href="feature.html" class="dropdown-item">Features</a>
+              <a href="appointment.html" class="dropdown-item">Appointment</a>
+              <a href="team.html" class="dropdown-item active">Team Members</a>
+              <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+              <a href="404.html" class="dropdown-item">404 Page</a>
+            </div>
+          </div>
+          <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+        </div>
+      </div>
+      <a href="contact.html"
+   class="btn btn-primary px-3 d-none d-lg-block quote-btn">
+
+   Get A Quote
+
+</a>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Page Header Start -->
+    <div
+      class="container-fluid page-header py-5 mb-5 wow fadeIn"
+      data-wow-delay="0.1s"
+    >
+      <div class="container py-5">
+        <h1 class="display-4 animated slideInDown mb-4">Team Members</h1>
+        <nav aria-label="breadcrumb animated slideInDown">
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="#">Pages</a></li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Team Members
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <!-- Page Header End -->
+
+    <div class="container pb-5">
+        <div class="row g-4" id="galleryGrid">
+            <!-- Populated by JavaScript -->
+        </div>
+    </div>
+          
+
+    <!-- Team Start -->
+
+    <!-- =========================
+     GALLERY SECTION START
+========================= -->
+
+
+
+
+      <!-- GALLERY ROW -->
+
+      <!-- =========================
+     GALLERY SECTION START
+========================= -->
+
+<div class="container-fluid py-5 gallery-section">
+
+  <div class="container py-5">
+
+      <!-- HEADING -->
+
+      <div class="text-center mx-auto pb-5"
+           style="max-width: 700px;">
+
+          <h4 class="text-primary">
+              Our Gallery
+          </h4>
+
+          <h1 class="display-5 mb-4">
+              Explore Our Insurance Services
+          </h1>
+
+          <p>
+              Explore our trusted insurance solutions, financial planning services,
+              investment solutions, and family protection plans.
+          </p>
+
+      </div>
+
+
+      <!-- FILTER BUTTONS -->
+
+      <div class="text-center mb-5">
+
+          <button class="gallery-btn active"
+                  data-filter="all">
+
+              All Services
+
+          </button>
+
+          <button class="gallery-btn"
+                  data-filter="life">
+
+              Life Insurance
+
+          </button>
+
+          <button class="gallery-btn"
+                  data-filter="health">
+
+              Health Insurance
+
+          </button>
+
+          <button class="gallery-btn"
+                  data-filter="investment">
+
+              Investment Plans
+
+          </button>
+
+          <button class="gallery-btn"
+                  data-filter="retirement">
+
+              Retirement Plans
+
+          </button>
+
+      </div>
+
+
+      <!-- GALLERY ROW -->
+
+      <div class="row g-4">
+
+
+          <!-- ITEM 1 -->
+
+          <div class="col-md-6 col-lg-4 gallery-item life">
+
+              <div class="gallery-card">
+
+                  <img src="img/life insurence.png"
+                       class="img-fluid"
+                       alt="">
+
+                  <div class="gallery-content">
+
+                      <span class="gallery-tag">
+                          Insurance
+                      </span>
+
+                      <h4>
+                          Term Life Insurance
+                      </h4>
+
+                      <p>
+                          Secure your family’s future with trusted life insurance protection plans.
+                      </p>
+
+                      <a href="#"
+                         class="btn btn-light btn-sm rounded-pill">
+
+                          View Details
+
+                      </a>
+
+                  </div>
+
+              </div>
+
+          </div>
+
+
+          <!-- ITEM 2 -->
+
+          <div class="col-md-6 col-lg-4 gallery-item health">
+
+              <div class="gallery-card">
+
+                  <img src="img/health.jpg"
+                       class="img-fluid"
+                       alt="">
+
+                  <div class="gallery-content">
+
+                      <span class="gallery-tag">
+                          Health
+                      </span>
+
+                      <h4>
+                          Health Insurance
+                      </h4>
+
+                      <p>
+                          Comprehensive health coverage for medical emergencies and protection.
+                      </p>
+
+                      <a href="#"
+                         class="btn btn-light btn-sm rounded-pill">
+
+                          View Details
+
+                      </a>
+
+                  </div>
+
+              </div>
+
+          </div>
+
+
+          <!-- ITEM 3 -->
+
+          <div class="col-md-6 col-lg-4 gallery-item life">
+
+              <div class="gallery-card">
+
+                  <img src="img/family_production.jpg"
+                       class="img-fluid"
+                       alt="">
+
+                  <div class="gallery-content">
+
+                      <span class="gallery-tag">
+                          Family
+                      </span>
+
+                      <h4>
+                          Family Protection Plans
+                      </h4>
+
+                      <p>
+                          Customized insurance solutions for long-term family security.
+                      </p>
+
+                      <a href="#"
+                         class="btn btn-light btn-sm rounded-pill">
+
+                          View Details
+
+                      </a>
+
+                  </div>
+
+              </div>
+
+          </div>
+
+
+          <!-- ITEM 4 -->
+
+          <div class="col-md-6 col-lg-4 gallery-item investment">
+
+              <div class="gallery-card">
+
+                  <img src="img/invertstment_img.jpg"
+                       class="img-fluid"
+                       alt="">
+
+                  <div class="gallery-content">
+
+                      <span class="gallery-tag">
+                          Investment
+                      </span>
+
+                      <h4>
+                          Investment & Wealth Plans
+                      </h4>
+
+                      <p>
+                          Insurance-backed investment plans designed for future wealth growth.
+                      </p>
+
+                      <a href="#"
+                         class="btn btn-light btn-sm rounded-pill">
+
+                          View Details
+
+                      </a>
+
+                  </div>
+
+              </div>
+
+          </div>
+
+
+          <!-- ITEM 5 -->
+
+          <div class="col-md-6 col-lg-4 gallery-item retirement">
+
+              <div class="gallery-card">
+
+                  <img src="img/pension_img.jpg"
+                       class="img-fluid"
+                       alt="">
+
+                  <div class="gallery-content">
+
+                      <span class="gallery-tag">
+                          Retirement
+                      </span>
+
+                      <h4>
+                          Retirement & Pension Plans
+                      </h4>
+
+                      <p>
+                          Financially secure retirement planning and pension services.
+                      </p>
+
+                      <a href="#"
+                         class="btn btn-light btn-sm rounded-pill">
+
+                          View Details
+
+                      </a>
+
+                  </div>
+
+              </div>
+
+          </div>
+
+
+          <!-- ITEM 6 -->
+
+          <div class="col-md-6 col-lg-4 gallery-item life">
+
+              <div class="gallery-card">
+
+                  <img src="img/higher-education.jpg"
+                       class="img-fluid"
+                       alt="">
+
+                  <div class="gallery-content">
+
+                      <span class="gallery-tag">
+                          Education
+                      </span>
+
+                      <h4>
+                          Child Education Plans
+                      </h4>
+
+                      <p>
+                          Smart financial planning solutions for your child’s future education.
+                      </p>
+
+                      <a href="#"
+                         class="btn btn-light btn-sm rounded-pill">
+
+                          View Details
+
+                      </a>
+
+                  </div>
+
+              </div>
+
+          </div>
+
+      </div>
+
+  </div>
+
+</div>
+
+<!-- =========================
+   GALLERY SECTION END
+========================= -->
+
+
+
+<!-- =========================
+   GALLERY FILTER SCRIPT
+========================= -->
+
+<script>
+
+const filterButtons = document.querySelectorAll(".gallery-btn");
+const galleryItems = document.querySelectorAll(".gallery-item");
+
+filterButtons.forEach(button => {
+
+  button.addEventListener("click", () => {
+
+      // REMOVE ACTIVE BUTTON
+
+      filterButtons.forEach(btn => {
+          btn.classList.remove("active");
+      });
+
+      // ADD ACTIVE BUTTON
+
+      button.classList.add("active");
+
+      const filter = button.getAttribute("data-filter");
+
+      galleryItems.forEach(item => {
+
+          if(filter === "all"){
+
+              item.style.display = "block";
+
+          }
+
+          else if(item.classList.contains(filter)){
+
+              item.style.display = "block";
+
+          }
+
+          else{
+
+              item.style.display = "none";
+
+          }
+
+      });
+
+  });
+
+});
+
+
+// SHOW ALL ITEMS WHEN PAGE LOADS
+
+window.onload = () => {
+
+  galleryItems.forEach(item => {
+      item.style.display = "block";
+  });
+
+};
+
+</script>
+
+  </div>
+
+</div>
+
+<!-- =========================
+   GALLERY SECTION END
+========================= -->
+    
+    <!-- Team End -->
+
+    <!-- Footer Start -->
+    <div
+      class="container-fluid bg-dark footer mt-5 pt-5 wow fadeIn"
+      data-wow-delay="0.1s">
+      <div class="container py-5">
+        <div class="row g-5">
+          <div class="col-lg-3 col-md-6">
+            <h1 class="text-white mb-4">
+              <img
+                class="img-fluid me-3"
+                src="img/icon/logo_a2z.png"
+                alt=""
+                width="70"
+              />A2Z
+            </h1>
+            <p>
+                A2Z Insurance & Financial Services Pvt Ltd provides trusted insurance 
+        and financial solutions for individuals, families, and businesses 
+        with complete security, professional guidance, and peace of mind.
+            </p>
+            <div class="d-flex pt-2">
+              <a class="btn btn-square me-1" href=""
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a class="btn btn-square me-1" href=""
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a class="btn btn-square me-1" href=""
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a class="btn btn-square me-0" href=""
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h5 class="text-light mb-4">Address</h5>
+            <p>
+              <i class="fa fa-map-marker-alt me-3"></i>Aparna Kanopy Marigold, Kompally, Hyderabad - 500100
+            </p>
+            <p><i class="fa fa-phone-alt me-3"></i>+91 7981862386</p>
+            <p><i class="fa fa-envelope me-3"></i>info@example.com</p>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h5 class="text-light mb-4">Quick Links</h5>
+            <a class="btn btn-link" href="">About Us</a>
+            <a class="btn btn-link" href="">Contact Us</a>
+            <a class="btn btn-link" href="">Our Services</a>
+            <a class="btn btn-link" href="">Terms & Condition</a>
+            <a class="btn btn-link" href="">Support</a>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h5 class="text-light mb-4">Newsletter</h5>
+            <p>Stay updated with the latest insurance plans, financial solutions, 
+and expert guidance from A2Z Insurance & Financial Services Pvt Ltd.</p>
+            <div class="position-relative mx-auto" style="max-width: 400px">
+              <input
+                class="form-control bg-transparent w-100 py-3 ps-4 pe-5"
+                type="text"
+                placeholder="Your email"
+              />
+              <button
+                type="button"
+                class="btn btn-secondary py-2 position-absolute top-0 end-0 mt-2 me-2"
+              >
+                SignUp
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid copyright">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+              &copy; <a href="#">A2Z Insurance & Financial Services Pvt Ltd</a>, All Right Reserved.
+            </div>
+            <div class="col-md-6 text-center text-md-end">
+              <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+              Designed By <a href="#"> A2Z Insurance Team</a>
+              <br />Distributed By:
+              <a href="https://themewagon.com" target="_blank">A2Z Insurance Team</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
+      ><i class="bi bi-arrow-up"></i
+    ></a>
+
+    <!-- JavaScript Libraries -->
+    
+    
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

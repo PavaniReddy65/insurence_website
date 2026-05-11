@@ -592,6 +592,211 @@
 .service .service-item:hover .service-content::after {
     height: 100%;
 }
+
+/* =========================
+   MOBILE RESPONSIVE FIX
+========================= */
+/*
+@media (max-width: 768px) {
+
+    body{
+        overflow-x: hidden;
+    }
+
+    /* HERO SECTION */
+/*
+    .carousel-caption h1,
+    .display-1,
+    .display-2,
+    .display-3,
+    .display-4 {
+        font-size: 32px !important;
+        line-height: 1.3 !important;
+    }
+
+    .carousel-caption p {
+        font-size: 15px !important;
+    }
+
+    /* BUTTON */
+/*
+    .btn {
+        padding: 10px 20px !important;
+        font-size: 14px !important;
+    }
+
+    /* NAVBAR */
+/*
+    .navbar .navbar-nav .nav-link {
+        margin-left: 0;
+        padding: 12px 0;
+        text-align: center;
+    }
+
+    /* LOGO */
+/*
+    .navbar-brand img {
+        max-height: 40px !important;
+    }
+
+    /* CAROUSEL IMAGE */
+/*
+    #header-carousel .carousel-item {
+        min-height: 500px;
+    }
+
+    #header-carousel .carousel-item img {
+        height: 500px;
+        object-fit: cover;
+    }
+
+    /* SERVICE */
+/*
+    .service .service-item {
+        margin-bottom: 25px;
+    }
+
+    .service .service-content {
+        padding: 25px 20px;
+    }
+
+    .service .service-content .h4 {
+        font-size: 22px !important;
+    }
+
+    /* ABOUT IMAGE */
+/*
+    .about-img img {
+        margin-top: 20px;
+    }
+
+    /* TEXT ALIGN */
+/*
+    .text-start {
+        text-align: center !important;
+    }
+
+}  */
+
+
+/* EXTRA SMALL DEVICES */
+/*
+@media (max-width: 480px){
+
+    .carousel-caption h1,
+    .display-1,
+    .display-2,
+    .display-3,
+    .display-4 {
+        font-size: 26px !important;
+    }
+
+    p{
+        font-size:14px !important;
+    }
+
+}
+/*
+/* =========================
+   MOBILE RESPONSIVE FIX
+========================= */
+
+@media (max-width: 768px) {
+
+    body{
+        overflow-x:hidden;
+    }
+
+    /* NAVBAR */
+
+    .navbar-brand h1{
+        font-size:28px !important;
+    }
+
+    .navbar-brand img{
+        width:35px !important;
+    }
+
+    .navbar-nav{
+        text-align:center;
+    }
+
+    .navbar .nav-link{
+        padding:12px 0 !important;
+    }
+
+    /* HERO SECTION */
+
+    .carousel-caption{
+        top:50%;
+        transform:translateY(-50%);
+    }
+
+    .carousel-caption h1{
+        font-size:32px !important;
+        line-height:1.3;
+    }
+
+    .carousel-caption p{
+        font-size:15px !important;
+        line-height:1.7;
+    }
+
+    .carousel-caption .btn{
+        padding:10px 20px !important;
+        font-size:14px;
+    }
+
+    /* CAROUSEL IMAGE */
+
+    .carousel-item img{
+        height:500px !important;
+        object-fit:cover;
+    }
+
+    /* ABOUT SECTION */
+
+    .display-6{
+        font-size:30px !important;
+    }
+
+    p{
+        font-size:15px !important;
+    }
+
+    /* SERVICES */
+
+    .service .service-item{
+        margin-bottom:25px;
+    }
+
+    /* FOOTER */
+
+    .footer{
+        text-align:center;
+    }
+
+}
+
+
+/* EXTRA SMALL DEVICES */
+
+@media (max-width: 480px){
+
+    .carousel-caption h1{
+        font-size:26px !important;
+    }
+
+    .carousel-caption p{
+        font-size:14px !important;
+    }
+
+    .display-6{
+        font-size:26px !important;
+    }
+
+}
+
 /*** Service End ***/
 
 

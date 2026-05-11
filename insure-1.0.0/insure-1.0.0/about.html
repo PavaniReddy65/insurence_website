@@ -37,6 +37,30 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
+
+    <style>
+      /* BUTTON JUMP ANIMATION */
+
+.quote-btn{
+    animation: jump 2s infinite;
+}
+
+@keyframes jump{
+
+    0%{
+        transform: translateY(0);
+    }
+
+    50%{
+        transform: translateY(-8px);
+    }
+
+    100%{
+        transform: translateY(0);
+    }
+
+}
+    </style>
   </head>
 
   <body>
@@ -96,7 +120,7 @@
         <h1 class="m-0">
           <img
             class="img-fluid me-3"
-            src="img/icon/logo.jpg"
+            src="img/icon/logo_a2z.png"
             alt=""
             width="70"
           />A2Z
@@ -115,6 +139,7 @@
           <a href="index.html" class="nav-item nav-link">Home</a>
           <a href="about.html" class="nav-item nav-link active">About Us</a>
           <a href="service.html" class="nav-item nav-link">Our Services</a>
+          <a href="gallery.html" class="nav-item nav-link">Gallery</a>
           <div class="nav-item dropdown">
             <a
               href="#"
@@ -133,7 +158,12 @@
           <a href="contact.html" class="nav-item nav-link">Contact Us</a>
         </div>
       </div>
-      <a href="" class="btn btn-primary px-3 d-none d-lg-block">Get A Quote</a>
+      <a href="contact.html"
+   class="btn btn-primary px-3 d-none d-lg-block quote-btn">
+
+   Get A Quote
+
+</a>
     </nav>
     <!-- Navbar End -->
 
@@ -412,7 +442,7 @@
             <h1 class="text-white mb-4">
               <img
                 class="img-fluid me-3"
-                src="img/icon/logo.jpg"
+                src="img/icon/logo_a2z.png"
                 alt=""
                 width="70"
               />A2Z

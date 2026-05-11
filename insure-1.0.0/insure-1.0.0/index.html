@@ -37,6 +37,72 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
+
+    <style>
+      /* BUTTON JUMP ANIMATION */
+
+.quote-btn{
+    animation: jump 2s infinite;
+}
+
+@keyframes jump{
+
+    0%{
+        transform: translateY(0);
+    }
+
+    50%{
+        transform: translateY(-8px);
+    }
+
+    100%{
+        transform: translateY(0);
+    }
+
+}
+    </style>
+
+    <style>
+      /* =========================
+   FEATURE HOVER EFFECT
+========================= */
+
+.feature-box{
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.feature-box:hover{
+    transform: translateY(-10px);
+}
+
+.feature-box .bg-white{
+    transition: 0.5s;
+    border: 2px solid transparent;
+}
+
+.feature-box:hover .bg-white{
+    background: white !important;
+    border-color: #0d6efd;
+    box-shadow: 0px 15px 35px rgba(13,110,253,0.3);
+}
+
+.feature-box img{
+    transition: 0.5s;
+}
+
+.feature-box:hover img{
+    transform: rotateY(360deg) scale(1.1);
+}
+
+.feature-box h5{
+    transition: 0.5s;
+}
+
+.feature-box:hover h5{
+    color:black;
+}
+    </style>
   </head>
 
   <body>
@@ -97,9 +163,9 @@
         <h1 class="m-0">
           <img
             class="img-fluid me-3"
-            src="img/icon/logo.jpg"
+            src="img/icon/logo_a2z.png"
             alt=""
-            width="40"
+            width="60"
           />A2Z
         </h1>
       </a>
@@ -116,6 +182,7 @@
           <a href="index.html" class="nav-item nav-link active">Home</a>
           <a href="about.html" class="nav-item nav-link">About Us</a>
           <a href="service.html" class="nav-item nav-link">Our Services</a>
+          <a href="gallery.html" class="nav-item nav-link">Gallery</a>
           <div class="nav-item dropdown">
             <a
               href="#"
@@ -134,7 +201,12 @@
           <a href="contact.html" class="nav-item nav-link">Contact Us</a>
         </div>
       </div>
-      <a href="" class="btn btn-primary px-3 d-none d-lg-block">Get A Quote</a>
+      <a href="contact.html"
+   class="btn btn-primary px-3 d-none d-lg-block quote-btn">
+
+   Get A Quote
+
+</a>
     </nav>
     <!-- Navbar End -->
 
@@ -148,7 +220,7 @@
               <div class="container">
                 <div class="row">
                   <div class="col-12 col-lg-6">
-                    <h1 class="display-3 text-dark mb-4 animated slideInDown">
+                    <h1 class="display-5 text-dark mb-4 animated slideInDown">
                       Protecting Your Future Starts Here
                     
                     </h1>
@@ -219,7 +291,7 @@
             >
               <img
                 class="position-absolute w-100 h-100"
-                src="img/about.jpg"
+                src="img/we are here.jpg"
                 alt=""
                 style="object-fit: cover"
               />
@@ -339,7 +411,7 @@
             </p>
             <div class="row g-3">
               <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
-                <div class="bg-light rounded h-100 p-3">
+                <div class="bg-light rounded h-100 p-3 feature-box">
                   <div
                     class="bg-white d-flex flex-column justify-content-center text-center rounded h-100 py-4 px-3"
                   >
@@ -353,7 +425,7 @@
                 </div>
               </div>
               <div class="col-sm-6 wow fadeIn" data-wow-delay="0.2s">
-                <div class="bg-light rounded h-100 p-3">
+                <div class="bg-light rounded h-100 p-3 feature-box">
                   <div
                     class="bg-white d-flex flex-column justify-content-center text-center rounded py-4 px-3"
                   >
@@ -367,7 +439,7 @@
                 </div>
               </div>
               <div class="col-sm-6 wow fadeIn" data-wow-delay="0.3s">
-                <div class="bg-light rounded h-100 p-3">
+                <div class="bg-light rounded h-100 p-3 feature-box">
                   <div
                     class="bg-white d-flex flex-column justify-content-center text-center rounded py-4 px-3"
                   >
@@ -381,7 +453,7 @@
                 </div>
               </div>
               <div class="col-sm-6 wow fadeIn" data-wow-delay="0.4s">
-                <div class="bg-light rounded h-100 p-3">
+                <div class="bg-light rounded h-100 p-3 feature-box">
                   <div
                     class="bg-white d-flex flex-column justify-content-center text-center rounded h-100 py-4 px-3"
                   >
@@ -403,7 +475,7 @@
             >
               <img
                 class="position-absolute w-100 h-100"
-                src="img/feature.jpg"
+                src="img/why chos.jpg"
                 alt=""
                 style="object-fit: cover"
               />
@@ -487,7 +559,7 @@
 
                     <div class="service-img">
 
-                        <img src="img/blog-1.png"
+                        <img src="img/life insurence.png"
                              class="img-fluid rounded-top w-100"
                              alt="">
 
@@ -539,7 +611,7 @@
 
                     <div class="service-img">
 
-                        <img src="img/blog-2.png"
+                        <img src = "./img/health.jpg"
                              class="img-fluid rounded-top w-100"
                              alt="">
 
@@ -695,13 +767,13 @@
 
                     <div class="service-img">
 
-                        <img src="img/blog-5.png"
+                        <img src="img/higher-education.jpg"
                              class="img-fluid rounded-top w-100"
                              alt="">
 
                         <div class="service-icon p-3">
 
-                            <img src="img/icon/chaild.png"
+                            <img src="img/icon/chail_img.jpg"
                                  width="45"
                                  alt="">
 
@@ -749,13 +821,12 @@
 
                     <div class="service-img">
 
-                        <img src="img/blog-6.png"
+                        <img src="img/pension_img.jpg"
                              class="img-fluid rounded-top w-100"
                              alt="">
 
                         <div class="service-icon p-3">
-
-                            <img src="img/icon/pension.png"
+                            <img src="img/icon/pension_img.jpg"
                                  width="45"
                                  alt="">
 
@@ -803,13 +874,13 @@
 
                     <div class="service-img">
 
-                        <img src="img/blog-7.png"
+                        <img src="img/invertstment_img.jpg"
                              class="img-fluid rounded-top w-100"
                              alt="">
 
                         <div class="service-icon p-3">
 
-                            <img src="img/icon/inversement.png"
+                            <img src="img/icon/inverst_logo.jpg"
                                  width="45"
                                  alt="">
 
@@ -857,7 +928,7 @@
 
                     <div class="service-img">
 
-                        <img src="img/blog-8.png"
+                        <img src="img/family_production.jpg"
                              class="img-fluid rounded-top w-100"
                              alt="">
 
@@ -906,8 +977,8 @@
 </div>
 
     <!-- Appointment Start -->
-    <div
-      class="container-fluid appointment my-5 py-5 wow fadeIn"
+    <!--
+    <div class="container-fluid appointment my-5 py-5 wow fadeIn"
       data-wow-delay="0.1s"
     >
       <div class="container py-5">
@@ -1004,7 +1075,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <!-- Appointment End -->
 
     <!-- Team Start -->
@@ -1128,7 +1199,188 @@
     <!-- Team End -->
 
     <!-- Testimonial Start -->
+
     <div class="container-xxl py-5">
+      <div class="container">
+    
+        <!-- SECTION TITLE -->
+    
+        <div class="text-center mx-auto" style="max-width: 600px">
+    
+          <h4 class="text-primary">Service Reviews</h4>
+    
+          <h1 class="display-6 mb-5">
+            Trusted Insurance & Financial Solutions
+          </h1>
+    
+        </div>
+    
+    
+        <div class="row g-5">
+    
+          <!-- LEFT SIDE IMAGES -->
+    
+          <div class="col-lg-3 d-none d-lg-block">
+    
+            <div class="testimonial-left h-100">
+    
+              <img
+                class="img-fluid animated pulse infinite"
+                src="img/life insurence.png"
+                alt=""
+              />
+    
+              <img
+                class="img-fluid animated pulse infinite"
+                src="img/health.jpg"
+                alt=""
+              />
+    
+              <img
+                class="img-fluid animated pulse infinite"
+                src="img/family_production.jpg"
+                alt=""
+              />
+    
+            </div>
+    
+          </div>
+    
+    
+          <!-- REVIEW CONTENT -->
+    
+          <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+    
+            <div class="owl-carousel testimonial-carousel">
+    
+              <!-- REVIEW 1 -->
+    
+              <div class="testimonial-item text-center">
+    
+                <img
+                  class="img-fluid rounded mx-auto mb-4"
+                  src="img/life insurence.png"
+                  alt=""
+                />
+    
+                <p class="fs-5">
+                  Secure your family’s future with trusted and affordable
+                  term life insurance plans designed for long-term financial protection.
+                </p>
+    
+                <h5>Term Life Insurance</h5>
+    
+                <span>Financial Security & Protection</span>
+    
+              </div>
+    
+    
+              <!-- REVIEW 2 -->
+    
+              <div class="testimonial-item text-center">
+    
+                <img
+                  class="img-fluid rounded mx-auto mb-4"
+                  src="img/health.jpg"
+                  alt=""
+                />
+    
+                <p class="fs-5">
+                  Comprehensive health insurance solutions that provide
+                  medical coverage and peace of mind during emergencies.
+                </p>
+    
+                <h5>Health Insurance</h5>
+    
+                <span>Medical Coverage & Support</span>
+    
+              </div>
+    
+    
+              <!-- REVIEW 3 -->
+    
+              <div class="testimonial-item text-center">
+    
+                <img
+                  class="img-fluid rounded mx-auto mb-4"
+                  src="img/invertstment_img.jpg"
+                  alt=""
+                />
+    
+                <p class="fs-5">
+                  Investment and wealth plans designed to help you
+                  grow savings, achieve goals, and build a secure future.
+                </p>
+    
+                <h5>Investment & Wealth Plans</h5>
+    
+                <span>Future Growth & Savings</span>
+    
+              </div>
+    
+    
+              <!-- REVIEW 4 -->
+    
+              <div class="testimonial-item text-center">
+    
+                <img
+                  class="img-fluid rounded mx-auto mb-4"
+                  src="img/pension_img.jpg"
+                  alt=""
+                />
+    
+                <p class="fs-5">
+                  Retirement and pension solutions that ensure financial
+                  independence and stability after retirement.
+                </p>
+    
+                <h5>Retirement & Pension Plans</h5>
+    
+                <span>Retirement Financial Planning</span>
+    
+              </div>
+    
+            </div>
+    
+          </div>
+    
+    
+          <!-- RIGHT SIDE IMAGES -->
+    
+          <div class="col-lg-3 d-none d-lg-block">
+    
+            <div class="testimonial-right h-100">
+    
+              <img
+                class="img-fluid animated pulse infinite"
+                src="img/higher-education.jpg"
+                alt=""
+              />
+    
+              <img
+                class="img-fluid animated pulse infinite"
+                src="img/pension_img.jpg"
+                alt=""
+              />
+    
+              <img
+                class="img-fluid animated pulse infinite"
+                src="img/invertstment_img.jpg"
+                alt=""
+              />
+    
+            </div>
+    
+          </div>
+    
+        </div>
+    
+      </div>
+    </div>
+
+
+
+    <!--<div class="container-xxl py-5">
       <div class="container">
         <div class="text-center mx-auto" style="max-width: 500px">
           <h1 class="display-6 mb-5">What They Say About Our Insurance</h1>
@@ -1220,8 +1472,10 @@
           </div>
         </div>
       </div>
-    </div>
+    </div>-->
     <!-- Testimonial End -->
+
+
 
     <!-- Footer Start -->
     <div
@@ -1234,7 +1488,7 @@
             <h1 class="text-white mb-4">
               <img
                 class="img-fluid me-3"
-                src="img/icon/logo.jpg"
+                src="img/icon/logo_a2z.png"
                 alt=""
                 width="70"
               />A2Z
